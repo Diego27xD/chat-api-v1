@@ -10,7 +10,7 @@ Este es un proyecto de Node.js que utiliza Express y TypeScript para crear una A
 
 ## Uso
 
-Para usar la API, envía una solicitud HTTP a la ruta `/api/chat`. La API responderá con una respuesta JSON que contiene un mensaje de chat aleatorio.
+Para usar la API, envía una solicitud HTTP a la ruta `/api/v1/auth` (POST). La API responderá con una respuesta JSON que contiene un mensaje de chat aleatorio.
 
 ## Contribución
 

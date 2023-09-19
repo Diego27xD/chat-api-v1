@@ -1,16 +1,18 @@
 # chat_api
 
-Este es un proyecto de Node.js que utiliza Express y TypeScript para crear una API de chat.
+Este es un proyecto de Node.js que utiliza Mongo, Express y TypeScript para crear una API de chat.
 
 ## Instalación
 
 1. Clona este repositorio.
 2. Ejecuta `npm install` para instalar las dependencias.
 3. Ejecuta `npm run dev` para iniciar el servidor en modo de desarrollo.
+4. Crea una base de datos en Mongo Atlas y obten la URL de conexión.
+5. Ejecuta `npx prisma db push` para migrar el schema a la base de datos.
 
 ## Uso
 
-Para usar la API, envía una solicitud HTTP a la ruta `/api/v1/auth` (POST). La API responderá con una respuesta JSON que contiene un mensaje de chat aleatorio.
+Para usar la API, envía una solicitud HTTP a la ruta `/api/v1/auth/register` (POST). La API responderá con una respuesta JSON que contiene un mensaje con el estado de la petición.
 
 ## Contribución
 

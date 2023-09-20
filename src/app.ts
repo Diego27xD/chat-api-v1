@@ -6,7 +6,7 @@ import "dotenv/config";
 
 export const app: Express = express();
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT;
 
 app.use(cors());
 // app.use(bodyParser.urlencoded({ extended: false }));

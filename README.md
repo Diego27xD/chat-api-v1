@@ -14,7 +14,10 @@ Este es un proyecto de Node.js que utiliza Mongo, Express y TypeScript para crea
 
 ## Uso
 
-Para usar la API, envía una solicitud HTTP a la ruta `/api/v1/auth/register` (POST). La API responderá con una respuesta JSON que contiene un mensaje con el estado de la petición.
+Para usar la API, envía una solicitud HTTP a las rutas:
+
+1. `/api/v1/auth/signup` (POST). Registra el usuario
+2. `/api/v1/auth/signin` (POST). Loguea al usuario
 
 ## Contribución
 

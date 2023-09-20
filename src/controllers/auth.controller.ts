@@ -1,10 +1,8 @@
 import { Request, Response } from "express";
-import { PrismaClient } from "@prisma/client";
 import { User } from "../interfaces/user";
-import { registerUser } from "../services/auth.service";
+import { loginUser, registerUser } from "../services/auth.service";
 import { getErrorMessage, reportError } from "../handlers/error.handle";
-
-const prisma = new PrismaClient();
+import { Auth } from "../interfaces/auth";
 
 const signUp = async (req: Request, res: Response) => {
   try {
@@ -16,14 +14,20 @@ const signUp = async (req: Request, res: Response) => {
     });
   } catch (error) {
     return reportError({ message: getErrorMessage(error) }, res);
-  } finally {
-    await prisma.$disconnect();
   }
 };
 
 const signIn = async (req: Request, res: Response) => {
   try {
-  } catch (error) {}
+    const result = await loginUser(req.body as Auth);
+
+    res.status(result.status!).json({
+      ok: true,
+      result,
+    });
+  } catch (error) {
+    return reportError({ message: getErrorMessage(error) }, res);
+  }
 };
 
-export { signUp };
+export { signUp, signIn };

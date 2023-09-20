@@ -6,9 +6,9 @@ Este es un proyecto de Node.js que utiliza Mongo, Express y TypeScript para crea
 
 1. Clona este repositorio.
 2. Ejecuta `npm install` para instalar las dependencias.
-3. Crea un archivo `.env` donde definas la variable: `PORT`
-4. Crea una base de datos en Mongo Atlas y obten la URL de conexión.
-5. Ejecuta `npx prisma` y `npx prisma init` para crear los archivos de configuración
+3. En el archivo `.env` define las variables `PORT` y `JWT_TOKEN_SECRET`
+4. Ejecuta `npx prisma` y `npx prisma init` para crear los archivos de configuración
+5. Crea una base de datos en Mongo Atlas y obten la URL de conexión, agregarlo al archivo `.env`.
 6. Ejecuta `npx prisma db push` para migrar el schema a la base de datos.
 7. Ejecuta `npm run dev` para iniciar el servidor en modo de desarrollo.
 
